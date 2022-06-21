@@ -368,20 +368,22 @@ pre code {
 </div>
 
 
-<pre class="r"><code>as_tibble(wiki_hot_100s)</code></pre>
-<pre><code>## # A tibble: 5,701 × 4
-##    no    title                     artist              year 
-##    &lt;chr&gt; &lt;chr&gt;                     &lt;chr&gt;               &lt;chr&gt;
-##  1 1     Theme from A Summer Place Percy Faith         1960 
-##  2 2     He&#39;ll Have to Go          Jim Reeves          1960 
-##  3 3     Cathy&#39;s Clown             The Everly Brothers 1960 
-##  4 4     Running Bear              Johnny Preston      1960 
-##  5 5     Teen Angel                Mark Dinning        1960 
-##  6 6     I&#39;m Sorry                 Brenda Lee          1960 
-##  7 7     It&#39;s Now or Never         Elvis Presley       1960 
-##  8 8     Handy Man                 Jimmy Jones         1960 
-##  9 9     Stuck on You              Elvis Presley       1960 
-## 10 10    The Twist                 Chubby Checker      1960 
+<pre class="r"><code>x &lt;- wiki_hot_100s |&gt; 
+  as_tibble()</code></pre>
+<pre class="r"><code>x |&gt; select(artist)</code></pre>
+<pre><code>## # A tibble: 5,701 × 1
+##    artist             
+##    &lt;chr&gt;              
+##  1 Percy Faith        
+##  2 Jim Reeves         
+##  3 The Everly Brothers
+##  4 Johnny Preston     
+##  5 Mark Dinning       
+##  6 Brenda Lee         
+##  7 Elvis Presley      
+##  8 Jimmy Jones        
+##  9 Elvis Presley      
+## 10 Chubby Checker     
 ## # … with 5,691 more rows</code></pre>
 
 
