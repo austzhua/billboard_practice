@@ -1,0 +1,17 @@
+---
+title: "billboard"
+output: html_document
+date: '2022-06-21'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(billboard)
+library(tidyverse)
+```
+
+```{r}
+x <- wiki_hot_100s |> 
+  as_tibble()
+```
+
